@@ -1,0 +1,28 @@
+@{
+  Layout = "_Layout";
+}
+@model Factory.Models.Engineer
+
+<h2>Doctor Details</h2>
+<hr />
+<h3>@Html.DisplayNameFor(model => model.Name): @Html.DisplayFor(ModelExpressionProvider => ModelExpressionProvider.Name) </h3>
+
+@if (@Model.JoinEntities.Count == 0)
+{
+  <h4><i class="bi bi-exclamation-triangle"></i>This engineer is not licensed to repair any machines currently on your list</h4>
+}
+else
+{
+  <h4>Machines this engineer is licensed to work on:</h4>
+  <ul>
+  @foreach (var join in Model.JoinEntities)
+    {
+      <i class="bi bi-gear-wide"></i>@join.Machine.Name
+    }
+  </ul>
+}
+
+<h5>@Html.ActionLink("Edit Engineer", "Edit", "Engineers", new { id =Model.EngineerId })</h5>
+<h5>@Html.ActionLink("Delete Engineer", "Delete", "Engineers", new { id =Model.EngineerId })</h5>
+<h5>@Html.ActionLink("View Engineers List", "Index", "Engineers")</h5>
+<h5>@Html.ActionLink("Main Menu", "Index", "Home")</h5>
