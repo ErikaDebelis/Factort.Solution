@@ -1,1 +1,18 @@
-<i class="bi bi-person-plus"></i>
+@{
+  Layout = "_Layout";
+}
+
+@model Factory.Models.Engineer
+
+<h2>Add a new Engineer</h2>
+@using (Html.BeginForm())
+{
+  @Html.LabelFor(model => model.Name)
+  @Html.TextBoxFor(model => model.Name, new {required = "required"})
+  <input type="submit" value="Add New Engineer" class="btn btn-success" />
+}
+
+  @Html.ActionLink("Show all Engineers", "Index", "Engineers")
+  @Html.ActionLink("Home", "Index", "Home")
+
+@* <i class="bi bi-person-plus"></i> *@

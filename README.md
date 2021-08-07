@@ -21,9 +21,9 @@ A console web application to keep track of their machine repairs. The program wi
 
 2. Open git BASH terminal and navigate to the Factory folder within the directory
 
-3. Create appsettings.json file in the HairSalon directory of HairSalon.Solution and add the following code to the file: 
+3. Create appsettings.json file in the Factory directory of Factory.Solution and add the following code to the file: 
     ``touch appsettings.json``
-    
+
 ```
 {
   "ConnectionStrings":
