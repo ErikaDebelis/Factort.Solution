@@ -1,4 +1,27 @@
-<i class="bi bi-hammer"></i>
-<i class="bi bi-tools"></i>
+@{
+  Layout = "_Layout";
+}
 
-<i class="bi bi-person-plus"></i>
+@using Factory.Models;
+
+<h1>Engineer List</h1>
+
+@if (@Model.Count == 0)
+{
+  <h3><i class="bi bi-exclamation-triangle"></i>No Engineers have been added yet!</h3>
+}
+
+<ul>
+  @foreach (Engineer engineer in Model)
+  {
+    <i class="bi bi-hammer"></i>@Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId })
+  }
+</ul>
+
+
+<h5>@Html.ActionLink("Add New Engineer", "Create", "Engineers")</h5>
+<h5>@Html.ActionLink("Home", "Index", "Home")</h5>
+
+@* 
+<i class="bi bi-tools"></i>
+<i class="bi bi-person-plus"></i> *@
