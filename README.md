@@ -40,14 +40,6 @@ Be sure to remove the ``{YOUR_USERNAME_NAME}`` and ``{YOUR_PASSWORD}`` and fill 
 4. Run "dotnet run" in the git BASH terminal to  minify the code, and run the project in the terminal.
     ``$ dotnet watch run``
 5. View the website by visiting localhost:5000/ in a new web browser( such as google chrome) tab!
-
-``dotnet tool install --global dotnet-ef --version 3.0.0``
-
-`` dotnet add package Microsoft.EntityFrameworkCore -v 5.0.0``
-
-``dotnet add package Pomelo.EntityFrameworkCore.MySql -v 5.0.0-alpha.2``
-
-``dotnet ef migrations add Initial``
 ## Bugs
 
 _no known bugs at this time_
