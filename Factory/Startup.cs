@@ -6,7 +6,6 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Factory.Models;
 
-
 namespace Factory
 {
   public class Startup
@@ -28,7 +27,6 @@ namespace Factory
         .AddDbContext<FactoryContext>(options => options
         .UseMySql(Configuration["ConnectionStrings:DefaultConnection"], ServerVersion.AutoDetect(Configuration["ConnectionStrings:DefaultConnection"])));
     }
-
 
     public void Configure(IApplicationBuilder app)
     {
