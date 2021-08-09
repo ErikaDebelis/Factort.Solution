@@ -14,10 +14,9 @@
 <ul>
   @foreach (Engineer engineer in Model)
   {
-    <i class="bi bi-hammer"></i>@Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId })
+    @Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId })
   }
 </ul>
-
 
 <h5>@Html.ActionLink("Add New Engineer", "Create", "Engineers")</h5>
 <h5>@Html.ActionLink("Main Menu", "Index", "Home")</h5>
