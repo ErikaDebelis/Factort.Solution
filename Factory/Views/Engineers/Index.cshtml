@@ -14,11 +14,11 @@
 <ul>
   @foreach (Engineer engineer in Model)
   {
-    @Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId })
+    <p><i class="bi bi-gear-fill"></i> @Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId })</p>
   }
 </ul>
 
-<h5>@Html.ActionLink("Add New Engineer", "Create", "Engineers") | @Html.ActionLink("Main Menu", "Index", "Home")</h5>
+<h5>@Html.ActionLink("Add New Engineer", "Create", "Engineers") | @Html.ActionLink("Add a new machine", "Create", "Machines") | @Html.ActionLink("Main Menu", "Index", "Home")</h5>
 
 @*
 <i class="bi bi-tools"></i>
