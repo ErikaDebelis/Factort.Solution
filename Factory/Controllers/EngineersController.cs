@@ -8,11 +8,11 @@ using System;
 
 namespace Factory.Controllers
 {
-  public class EngineerController : Controller
+  public class EngineersController : Controller
   {
     private readonly FactoryContext _db;
 
-    public EngineerController(FactoryContext db)
+    public EngineersController(FactoryContext db)
     {
       _db = db;
     }

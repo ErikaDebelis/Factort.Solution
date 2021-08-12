@@ -8,7 +8,7 @@
 
 @if (@Model.JoinEntities.Count == 0)
 {
-  <h4><i class="bi bi-exclamation-triangle"></i> Need an engineer licensed to repair this kind of machine</h4>
+  <h4><i class="bi bi-exclamation-triangle"></i>Need an engineer licensed to repair this kind of machine<i class="bi bi-exclamation-triangle"></i></h4>
 }
 else
 {
@@ -21,6 +21,4 @@ else
   </ul>
 }
 
-<h5>@Html.ActionLink("Edit Machine", "Edit", "Machines", new {id = Model.MachineId})</h5>
-<h5>@Html.ActionLink("Delete Machine", "Delete", "Machines", new {id = Model.MachineId})</h5>
-<h5>@Html.ActionLink("View all Machines", "Index", "Machines")</h5>
+<h5>@Html.ActionLink("Edit Machine", "Edit", "Machines", new {id = Model.MachineId}) | @Html.ActionLink("Delete Machine", "Delete", "Machines", new {id = Model.MachineId}) | @Html.ActionLink("View all Machines", "Index", "Machines")</h5>

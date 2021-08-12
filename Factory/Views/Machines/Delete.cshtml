@@ -4,15 +4,11 @@
 
 @model Factory.Models.Machine
 
-<h2><i class="bi bi-exclamation-octagon-fill"></i>
-Are you sure you want to delete @Html.DisplayFor(model => model.Name)?<i class="bi bi-exclamation-octagon-fill"></i>
-</h2>
+<h2><i class="bi bi-exclamation-octagon-fill"></i>Are you sure you want to delete @Html.DisplayFor(model => model.Name)?<i class="bi bi-exclamation-octagon-fill"></i></h2>
 
 @using (Html.BeginForm())
 {
-  <input type="submit" value="Delete" class="btn btn-danger" />
+  <input type="submit" value="Delete" class="btn btn-danger btn-sm" />
 }
 @* <i class="bi bi-trash"></i> *@
-<h5>@Html.ActionLink("Edit Machine", "Edit", "Machines", new {id = Model.MachineId})</h5>
-<h5>@Html.ActionLink("Back to the machines list", "Index", "Machines")</h5>
-<h5>@Html.ActionLink("Main Menu", "Index", "Home")</h5>
+<h5>@Html.ActionLink("Edit Machine", "Edit", "Machines", new {id = Model.MachineId}) | @Html.ActionLink("Back to the machines list", "Index", "Machines") | @Html.ActionLink("Main Menu", "Index", "Home")</h5>

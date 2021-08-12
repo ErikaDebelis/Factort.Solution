@@ -27,31 +27,16 @@ namespace Factory.Controllers
       ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "Name");
       return View();
     }
-
+    
     [HttpPost]
-    public ActionResult Create(string EngineerName, string MachineName, int EngineerId)
+    public ActionResult Create(Machine machine)
     {
-      int newEngineerId = EngineerId;
-
-      if (EngineerName != null)
-      {
-        Engineer newEngineer = new Engineer();
-        newEngineer.Name = EngineerName;
-        _db.Engineers.Add(newEngineer);
-        _db.SaveChanges();
-        newEngineerId = newEngineer.EngineerId;
-      }
-
-      EngineerMachine newEngineerMachine = new EngineerMachine();
-      newEngineerMachine.Machine.Name = MachineName;
-      newEngineerMachine.EngineerId = newEngineerId;
-      _db.EngineerMachine.Add(newEngineerMachine);
+      _db.Machines.Add(machine);
       _db.SaveChanges();
-
       return RedirectToAction("Index");
     }
 
-        public ActionResult Details(int id)
+    public ActionResult Details(int id)
     {
       Machine thisMachine = _db.Machines
         .Include(machine => machine.JoinEntities)

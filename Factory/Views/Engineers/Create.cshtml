@@ -9,10 +9,7 @@
 {
   @Html.LabelFor(model => model.Name)
   @Html.TextBoxFor(model => model.Name, new {required = "required"})
-  <input type="submit" value="Add New Engineer" class="btn btn-success" />
+  <button type="submit" value="Add New Engineer" class="btn btn-success btn-sm"><i class="bi bi-person-plus"></i></button>
 }
 
-  @Html.ActionLink("Show all Engineers", "Index", "Engineers")
-  @Html.ActionLink("Home", "Index", "Home")
-
-@* <i class="bi bi-person-plus"></i> *@
+<h5>@Html.ActionLink("Show all Engineers", "Index", "Engineers") | @Html.ActionLink("Home", "Index", "Home")</h5>
