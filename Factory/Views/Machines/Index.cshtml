@@ -15,8 +15,8 @@
 <ul>
   @foreach (Machine machine in Model)
   {
-    <p><i class="bi bi-gear-fill"></i>@Html.ActionLink($"{machine.Name}", "Details", new { id = machine.MachineId })</p>
+    <p><i class="bi bi-gear-fill"></i> @Html.ActionLink($"{machine.Name}", "Details", new { id = machine.MachineId })</p>
   }
 </ul>
 
-<h5>@Html.ActionLink("Add a new machine", "Create")</h5>
+<h5>@Html.ActionLink("Add New Engineer", "Create", "Engineers") | @Html.ActionLink("Add New Machine", "Create", "Machines") | @Html.ActionLink("View all Engineers", "Index", "Engineers") | @Html.ActionLink("Main Menu", "Index", "Home")</h5>

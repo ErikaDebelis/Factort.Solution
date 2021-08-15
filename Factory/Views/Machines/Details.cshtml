@@ -16,9 +16,9 @@ else
   <ul>
   @foreach (var join in Model.JoinEntities)
     {
-      <i class="bi bi-person-plus"></i>@join.Engineer.Name
+      <i class="bi bi-person"></i> @join.Engineer.Name
     }
   </ul>
 }
 
-<h5>@Html.ActionLink("Edit Machine", "Edit", "Machines", new {id = Model.MachineId}) | @Html.ActionLink("Delete Machine", "Delete", "Machines", new {id = Model.MachineId}) | @Html.ActionLink("View all Machines", "Index", "Machines")</h5>
+<h5>@Html.ActionLink("Edit Machine", "Edit", "Machines", new {id = Model.MachineId}) | @Html.ActionLink("Delete Machine", "Delete", "Machines", new {id = Model.MachineId}) | @Html.ActionLink("View all Machines", "Index", "Machines") | @Html.ActionLink("Main Menu", "Index", "Home")</h5>
