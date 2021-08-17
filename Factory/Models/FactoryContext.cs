@@ -14,5 +14,12 @@ namespace Factory.Models
     {
       optionsBuilder.UseLazyLoadingProxies();
     }
+
+    // protected override void OnModelCreating (ModelBuilder builder)
+    // {
+    //   builder.Entity<Engineer>()
+    //     .HasIndex(item => item.Name)
+    //     .IsUnique();
+    // }
   }
 }

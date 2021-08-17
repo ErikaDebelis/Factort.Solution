@@ -17,9 +17,13 @@ else
   <ul>
   @foreach (var join in Model.JoinEntities)
     {
-      <p><i class="bi bi-gear-wide"></i> @join.Machine.Name</p>
+      <p><i class="bi bi-gear-fill"></i> @join.Machine.Name</p>
     }
   </ul>
 }
 
-<h5>@Html.ActionLink("Add Machine to an Engineer", "AddMachine", "Engineers", new {id =Model.EngineerId}) | @Html.ActionLink("Edit Engineer", "Edit", "Engineers", new { id =Model.EngineerId }) | @Html.ActionLink("Delete Engineer", "Delete", "Engineers", new { id =Model.EngineerId }) | @Html.ActionLink("View Engineers List", "Index", "Engineers") | @Html.ActionLink("Main Menu", "Index", "Home")</h5>
+<h5>@Html.ActionLink("Add Machine to an Engineer", "AddMachine", "Engineers", new {id =Model.EngineerId}) | 
+  @Html.ActionLink("Edit Engineer", "Edit", "Engineers", new { id =Model.EngineerId }) | 
+  @Html.ActionLink("Delete Engineer", "Delete", "Engineers", new { id =Model.EngineerId }) | 
+  @Html.ActionLink("View Engineers List", "Index", "Engineers") | 
+  @Html.ActionLink("Main Menu", "Index", "Home")</h5>

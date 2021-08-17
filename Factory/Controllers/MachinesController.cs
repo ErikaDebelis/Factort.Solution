@@ -27,11 +27,36 @@ namespace Factory.Controllers
       ViewBag.EngineerId = new SelectList(_db.Engineers, "EngineerId", "Name");
       return View();
     }
-    
+
+    // create a new machine
+    // also create new engineer
+    // link those two together
+
+    // create a new machine
+    // find existing engineer
+    // link those two together
     [HttpPost]
-    public ActionResult Create(Machine machine)
+    public ActionResult Create(string EngineerName, string Name, int EngineerId)
     {
-      _db.Machines.Add(machine);
+      Machine newMachine = new Machine();
+      newMachine.Name = Name;
+      _db.Machines.Add(newMachine);
+      _db.SaveChanges();
+
+      int poopyEngineerButt = EngineerId;
+
+      if (EngineerName != null)
+      {
+        Engineer newEngineer = new Engineer();
+        newEngineer.Name = EngineerName;
+        _db.Engineers.Add(newEngineer);
+        _db.SaveChanges();
+        poopyEngineerButt = newEngineer.EngineerId;
+      }
+      EngineerMachine newEngineerMachine = new EngineerMachine();
+      newEngineerMachine.EngineerId = poopyEngineerButt;
+      newEngineerMachine.MachineId = newMachine.MachineId;
+      _db.EngineerMachine.Add(newEngineerMachine);
       _db.SaveChanges();
       return RedirectToAction("Index");
     }

@@ -14,7 +14,12 @@
   @Html.Label("Select an Engineer")
   @Html.DropDownList("EngineerId")
 
+  <label for="engineer">Add a new Licensed Engineer: </label>
+  <input id="engineer" name="EngineerName">
+
   <input type="submit" value="Add New Machine" class="btn btn-success btm-sm" />
 }
 
-<h5>@Html.ActionLink("Show all machines", "Index", "Machines") | @Html.ActionLink("Add a new Engineer", "Create", "Engineers") | @Html.ActionLink("Home", "Index", "Home")</h5>
+<h5>@Html.ActionLink("Show all machines", "Index", "Machines") | 
+  @Html.ActionLink("Add a new Engineer", "Create", "Engineers") | 
+  @Html.ActionLink("Home", "Index", "Home")</h5>
