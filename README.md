@@ -15,6 +15,8 @@ A console web application to keep track of their machine repairs. The program wi
 * _ASP .NET CORE MVC_
 * _Entity Framework Core_
 
+![factory-gif](https://raw.github.com/ErikaDebelis/Factory.Solution/main/Factory/wwwroot/images/factory-gif.gif)
+_(a gif for a visual preview of the site)_
 ## Setup/Installation Requirements
 
 1. Download or clone the https://github.com/ErikaDebelis/Factory.Solution to your local machine
