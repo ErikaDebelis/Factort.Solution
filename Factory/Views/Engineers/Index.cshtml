@@ -10,13 +10,14 @@
 {
   <h3><i class="bi bi-exclamation-triangle"></i>No Engineers have been added yet!<i class="bi bi-exclamation-triangle"></i></h3>
 }
-
-<ul>
-  @foreach (Engineer engineer in Model)
-  {
-    <p><i class="bi bi-gear-fill"></i> @Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId })</p>
-  }
-</ul>
+<div class="text-left">
+  <ul>
+    @foreach (Engineer engineer in Model)
+    {
+      <p><i class="bi bi-gear-fill"></i> @Html.ActionLink($"{engineer.Name}", "Details", new { id = engineer.EngineerId })</p>
+    }
+  </ul>
+</div>
 
 <h5>@Html.ActionLink("Add New Engineer", "Create", "Engineers") | 
   @Html.ActionLink("Add a new machine", "Create", "Machines") | 

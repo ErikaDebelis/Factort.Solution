@@ -4,10 +4,6 @@
   position: fixed;
 }
 
-#container {
-  min-height: 768px;
-}
-
 h5{
   margin-top: 30px;;
 }
@@ -16,6 +12,7 @@ body {
   padding: 30px 20px;
   border-radius: 30px;
   margin-top: 15px;
+  text-align: center;
 }
 
 h1, h2 {
@@ -52,8 +49,8 @@ html {
 }
 
 .container {
-	width: 100%;
-	height: 100%;
+	width: auto;
+	height: auto;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
@@ -70,13 +67,15 @@ html {
 	box-shadow: 0 5px 15px 0px rgba(0,0,0,0.6);
 	transform: translatey(0px);
 	animation: float 10s ease-in-out infinite;
-	img { width: 100%; height: auto; }
 }
 
-.content {
-	width: 100%;
-	max-width: 600px;
-	padding: 20px 40px;
-	box-sizing: border-box;
-	text-align: center;
+img {
+  width: 70%;
+  height: 78%;
+  padding-top: 2em;
+  padding-left: 0.5em;
+}
+
+.text-left {
+  text-align: left;
 }
