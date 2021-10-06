@@ -28,13 +28,6 @@ namespace Factory.Controllers
       return View();
     }
 
-    // create a new machine
-    // also create new engineer
-    // link those two together
-
-    // create a new machine
-    // find existing engineer
-    // link those two together
     [HttpPost]
     public ActionResult Create(string EngineerName, string Name, int EngineerId)
     {
@@ -43,7 +36,7 @@ namespace Factory.Controllers
       _db.Machines.Add(newMachine);
       _db.SaveChanges();
 
-      int poopyEngineerButt = EngineerId;
+      int newEngineerId = EngineerId;
 
       if (EngineerName != null)
       {
@@ -51,10 +44,10 @@ namespace Factory.Controllers
         newEngineer.Name = EngineerName;
         _db.Engineers.Add(newEngineer);
         _db.SaveChanges();
-        poopyEngineerButt = newEngineer.EngineerId;
+        newEngineerId = newEngineer.EngineerId;
       }
       EngineerMachine newEngineerMachine = new EngineerMachine();
-      newEngineerMachine.EngineerId = poopyEngineerButt;
+      newEngineerMachine.EngineerId = newEngineerId;
       newEngineerMachine.MachineId = newMachine.MachineId;
       _db.EngineerMachine.Add(newEngineerMachine);
       _db.SaveChanges();
